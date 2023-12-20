@@ -1,0 +1,67 @@
+.plan-wrapper {
+  .plan {
+    .plan-top,
+    .plan-title,
+    .plan-desc {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0em;
+    }
+    // .plan-title {
+    //   font-size: rem(50px);
+    //   line-height: rem(60px);
+    //   color: #3b3089;
+    // }
+    // .plan-desc {
+    //   font-size: rem(20px);
+    //   font-weight: 300;
+    //   line-height: rem(24px);
+    //   color: #3b3089;
+    // }
+    .plan-card {
+      position: relative;
+      font-family: 'Outfit', sans-serif;
+      background-color: #f8f8f8;
+      box-shadow: 0px 0px 5px 0px #4470b2;
+      &_title {
+        font-size: rem(20px);
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        color: #000000;
+      }
+      .plan-sale {
+        position: absolute;
+        padding: rem(7px) rem(23px) rem(9px) rem(23px);
+        border-radius: 5px;
+        top: 9px;
+        right: 0;
+        transform: translateX(rem(11px));
+        p {
+          color: #ffffff;
+          font-size: rem(14px);
+          font-weight: 400;
+        }
+      }
+    }
+    .plan-price {
+      font-family: 'Outfit', sans-serif;
+      &_top {
+        font-size: rem(14px);
+        text-decoration: line-through;
+      }
+      &_bottom {
+        font-size: rem(25px);
+        font-weight: 700;
+        line-height: 30px;
+        color: #4faf4d;
+      }
+      &_month {
+        font-size: rem(14px);
+        font-weight: 700;
+        line-height: rem(16.8px);
+        color: #000000;
+      }
+    }
+  }
+}
