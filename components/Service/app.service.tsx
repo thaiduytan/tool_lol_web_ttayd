@@ -17,6 +17,7 @@ export type MainServiceItem = {
   desc: string;
   bg: string;
   bgListService: string;
+  free: boolean;
   listService: ServiceItem[];
 };
 const serviceItems: MainServiceItem[] = [
@@ -26,6 +27,7 @@ const serviceItems: MainServiceItem[] = [
     desc: 'Free or Warez Applications',
     bg: 'rgba(0, 0, 0, 0.05)',
     bgListService: '',
+    free: true,
     listService: [
       {
         id: 2,
@@ -71,6 +73,7 @@ const serviceItems: MainServiceItem[] = [
     desc: 'License, Safe & Secure',
     bg: '#fff',
     bgListService: 'rgba(110, 195, 253, 0.30)',
+    free: false,
     listService: [
       {
         id: 9,
