@@ -1,46 +1,74 @@
 import React from 'react';
-import './app.intro.scss';
-import { Container, Flex, Grid, GridCol, Group, Image, Text, rem } from '@mantine/core';
+import { Box, Flex, Group, Image, Text, em, rem, useMantineTheme } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import ClampText from '../ClampText/app.clamtext';
+
+export type IntroItemsType = {
+  id: number;
+  icon: string;
+  label: string;
+};
+const introItems: IntroItemsType[] = [
+  {
+    id: 1,
+    icon: 'intro_icon_1.png',
+    label: 'All Resolusions',
+  },
+  {
+    id: 2,
+    icon: 'intro_icon_2.png',
+    label: 'Undetected',
+  },
+  {
+    id: 3,
+    icon: 'intro_icon_3.png',
+    label: 'Zero Performance Loss',
+  },
+  {
+    id: 4,
+    icon: 'intro_icon_4.png',
+    label: 'Compitable With All Champions',
+  },
+];
 
 const Intro = () => {
+  const theme = useMantineTheme();
+  const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
   return (
     <section className="intro-wrapper">
-      <Container size={1140} style={{ margin: '0 auto', padding: 0 }}>
-        {/* Nội dung trong container */}
-        <Grid gutter={1} className="intro">
-          <GridCol
-            span={12}
-            style={{
-              padding: '31px 41px 32px 41px',
-            }}
-          >
-            <Flex
-              gap={rem('57px')}
-              justify="flex-start"
-              align="flex-start"
-              direction="row"
-              wrap="wrap"
-            >
-              <Group gap={rem('12px')}>
-                <Image src="/asset/img/Vector (Stroke) (1).png" />
-                <Text>All Resolusions</Text>
+      <Box
+        className="intro"
+        style={{
+          borderRadius: rem('7px'),
+        }}
+        px={rem('41px')}
+        py={rem('31px')}
+        mt={!isTableb ? rem('170px') : rem('30px')}
+        bg={theme.colors.blue[4]}
+        ff={theme.headings.fontFamily}
+        lh={rem('24px')}
+      >
+        <Flex gap={rem('57px')} wrap="wrap">
+          {introItems &&
+            introItems.map((item) => (
+              <Group
+                key={`intro-${item.id}`}
+                gap={!isTableb ? rem('12px') : rem('8px')}
+                wrap="nowrap"
+                w={isMobile ? '100%' : isTableb ? '40%' : 'auto'}
+              >
+                <Image src={`/asset/img/${item.icon}`} />
+                <Text
+                  size={!isTableb ? theme.fontSizes.fs_20 : theme.fontSizes.fs_12}
+                  fw={theme.fontWeights.normal}
+                >
+                  <ClampText lines={2} text={item.label}></ClampText>
+                </Text>
               </Group>
-              <Group gap={rem('12px')}>
-                <Image src="/asset/img/Group 3.png" />
-                <Text>Undetected</Text>
-              </Group>
-              <Group gap={rem('12px')}>
-                <Image src="/asset/img/Group 2.png" />
-                <Text>Zero Performance Loss</Text>
-              </Group>
-              <Group gap={rem('12px')}>
-                <Image src="/asset/img/Vector (Stroke) (2).png" />
-                <Text>Compitable With All Champions</Text>
-              </Group>
-            </Flex>
-          </GridCol>
-        </Grid>
-      </Container>
+            ))}
+        </Flex>
+      </Box>
     </section>
   );
 };

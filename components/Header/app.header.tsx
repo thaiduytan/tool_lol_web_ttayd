@@ -1,11 +1,31 @@
+'use client';
 import './app.header.scss';
 import React from 'react';
 import Link from 'next/link';
-import { IconHeadphones, IconShoppingCart } from '@tabler/icons-react';
-import { Button, Center, Flex, Grid, GridCol, Group, Image, Menu, rem } from '@mantine/core';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import ButtonCustom from '../Button/app.button';
+import { IconShoppingCart } from '@tabler/icons-react';
+import {
+  Flex,
+  Grid,
+  GridCol,
+  Group,
+  Image,
+  Menu,
+  rem,
+  Box,
+  useMantineTheme,
+  em,
+} from '@mantine/core';
+import Headermobile from '../HeaderMoblie/app.headermobile';
+export interface IMenuItems {
+  id: number;
+  label: string;
+  link: string;
+  img?: boolean;
+}
 
-const menuItems = [
+const menuItems: IMenuItems[] = [
   { id: 1, label: 'How To Use', link: '/about' },
   { id: 2, label: 'Demo', link: '/contact' },
   { id: 3, label: 'Document', link: '/contact' },
@@ -18,18 +38,37 @@ const menuItems = [
 ];
 
 const AppHeader = () => {
+  const theme = useMantineTheme();
+  const [opened, { toggle }] = useDisclosure();
+  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
   return (
     <header id="header">
-      <Grid align="center" justify="start" display="flex">
+      <Menu shadow="md" width={200}></Menu>
+      <Grid align="center">
         {/* logo */}
-        <GridCol span={1}>
-          <div className="header-logo">
-            <Image radius="md" h={27.39} w={79} src="/asset/img/logo tcc.png" />
-          </div>
+        <GridCol span={{ base: 6, md: 1 }}>
+          <Box className="header-logo">
+            {!isTableb ? (
+              <Image h={27.39} w={79} src="/asset/img/header_logo.png" />
+            ) : (
+              <Image fit="contain" h={40} w={30} src="/asset/img/header_logo_moblie.png" />
+            )}
+          </Box>
         </GridCol>
-
+        {/* humbeger - menu mobile */}
+        <GridCol hiddenFrom="md" span={{ base: 6 }}>
+          <Flex align={'center'} justify={'flex-end'}>
+            {/* <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" /> */}
+            <Headermobile menuItems={menuItems} opened={opened} toggle={toggle}></Headermobile>
+          </Flex>
+        </GridCol>
         {/* nav */}
-        <GridCol className="header-nav" span={6} style={{ paddingLeft: rem('20px') }}>
+        <GridCol
+          visibleFrom="md"
+          className="header-nav"
+          span={6}
+          style={{ paddingLeft: rem('20px') }}
+        >
           <Menu>
             <Flex gap={66} direction="row" wrap="wrap" align="center">
               {menuItems.map((item) => (
@@ -39,7 +78,7 @@ const AppHeader = () => {
                       w={18.4}
                       h={20.59}
                       fit="contain"
-                      src="/asset/img/VectorStroke.png"
+                      src="/asset/img/header_icon_support.png"
                       style={{ paddingRight: rem('5px') }}
                     ></Image>
                   ) : (
@@ -51,15 +90,14 @@ const AppHeader = () => {
             </Flex>
           </Menu>
         </GridCol>
-
         {/* btn auth */}
-        <GridCol className="header-auth" span={3.5}>
+        <GridCol visibleFrom="md" className="header-auth" span={3.5}>
           <Group justify="start">
             <ButtonCustom
               height={rem('48px')}
               width={rem('152px')}
-              color="#ffffff"
-              background="linear-gradient(to right, #5d8fda 0%, #5da7da 100%)"
+              color={theme.colors.white[0]}
+              background={`linear-gradient(to right, ${theme.colors.blue[2]} 0%, ${theme.colors.blue[3]} 100%)`}
             >
               Join Now
             </ButtonCustom>
@@ -67,20 +105,21 @@ const AppHeader = () => {
             <ButtonCustom
               height={rem('48px')}
               width={rem('128px')}
-              color="#3b3089"
+              color={theme.colors.violet[1]}
               background="transparent"
-              border="2px solid #3b3089"
+              border={`2px solid ${theme.colors.violet[1]}`}
             >
               Sign In
             </ButtonCustom>
           </Group>
         </GridCol>
-
         {/* cart */}
-
-        <GridCol span={0.75}>
+        <GridCol visibleFrom="md" span={0.75}>
           <div className="header-cart">
-            <IconShoppingCart style={{ width: rem('30px'), height: rem('30px') }} color="#3B3089" />
+            <IconShoppingCart
+              style={{ width: rem('30px'), height: rem('30px') }}
+              color={theme.colors.violet[1]}
+            />
           </div>
         </GridCol>
       </Grid>

@@ -1,74 +1,142 @@
 import React from 'react';
-import './app.hero.scss';
-import { Button, Container, Grid, GridCol, Group, Image, rem } from '@mantine/core';
+// import './app.hero.scss';
+import {
+  Box,
+  Flex,
+  Grid,
+  GridCol,
+  Group,
+  Image,
+  Text,
+  Title,
+  em,
+  rem,
+  useMantineTheme,
+} from '@mantine/core';
 import ButtonCustom from '../Button/app.button';
+import { useMediaQuery } from '@mantine/hooks';
 const Hero = () => {
+  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const theme = useMantineTheme();
   return (
-    <main>
-      <section className="hero-wrapper">
-        <Container size={1140} style={{ margin: '0 auto' }}>
-          {/* Nội dung trong container */}
-          <Grid gutter={20} className="hero" justify="space-between">
-            {/* Các cột của hệ thống grid */}
-            <GridCol
-              span={6.5}
-              style={{
-                paddingTop: rem('100px'),
-              }}
-            >
-              <div
-                className="hero-heading"
-                style={{
-                  paddingBottom: rem('25px'),
-                }}
-              >
+    <section className="hero-wrapper">
+      {/* Nội dung trong container */}
+      <Grid
+        gutter={20}
+        className="hero"
+        justify="space-between"
+        pt={!isTableb ? rem('100px') : rem('15px')}
+      >
+        {/* Các cột của hệ thống grid */}
+        <GridCol span={{ base: 12, md: 6.5 }}>
+          <Box ff={theme.headings.fontFamily} fs={'normal'}>
+            <Box className="hero-heading" pb={rem('25px')}>
+              {!isTableb ? (
                 <Image
                   fit="contain"
                   w={rem('596.36px')}
                   h={rem('134.08px')}
-                  src="/asset/img/LoL Tool For League of Legends.png"
+                  src="/asset/img/LoLToolForLeagueofLegends.png"
                 />
-              </div>
-              <div
-                className="hero-desc"
-                style={{
-                  paddingBottom: rem('50px'),
-                }}
+              ) : (
+                <Title
+                  ta={'center'}
+                  fw={theme.fontWeights.blod}
+                  c={theme.colors.violet[1]}
+                  size={rem('30px')}
+                >
+                  LoL Tool For League of Legends
+                </Title>
+              )}
+            </Box>
+
+            <Box className="hero-desc" pb={rem('50px')} visibleFrom="md">
+              <Text
+                c={theme.colors.violet[1]}
+                size={theme.fontSizes.fs_20}
+                fw={theme.fontWeights.fw_300}
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate consequatur
                 nulla vel modi autem molestiae? Dolores unde esse ab fugit minus quod
-              </div>
-              <Group className="hero-btn" gap={28}>
-                <ButtonCustom width={rem('300px')} height={rem('72px')}>
-                  Getting Started
-                </ButtonCustom>
-                <ButtonCustom
-                  width={rem('187px')}
-                  height={rem('72px')}
-                  background="transparent"
-                  color="#3B3089"
-                  border="2px solid #3b3089"
-                >
-                  Demo
-                </ButtonCustom>
-              </Group>
-            </GridCol>
-            <GridCol span={5.5}>
-              <div className="hero-img">
-                <Image
-                  w={rem('481px')}
-                  h={rem('435.06px')}
-                  src="/asset/img/Group 35.png"
-                  style={{
-                    transform: `translateX(${150 - 131}px)`,
-                  }}
-                />
-              </div>
-            </GridCol>
-          </Grid>
-        </Container>
-      </section>
-    </main>
+              </Text>
+            </Box>
+
+            <Group visibleFrom="md" className="hero-btn" gap={28}>
+              <ButtonCustom width={rem('300px')} height={rem('72px')}>
+                Getting Started
+              </ButtonCustom>
+              <ButtonCustom
+                width={rem('187px')}
+                height={rem('72px')}
+                background="transparent"
+                color="#3B3089"
+                border="2px solid #3b3089"
+              >
+                Demo
+              </ButtonCustom>
+            </Group>
+          </Box>
+        </GridCol>
+
+        <GridCol span={{ base: 12, md: 5.5 }}>
+          <Box className="hero-img">
+            <Image
+              visibleFrom="md"
+              w={rem('481px')}
+              h={rem('435px')}
+              src="/asset/img/hero_main_img.png"
+              style={{
+                transform: `translateX(${150 - 131}px)`,
+              }}
+            />
+            <Image
+              mx={'auto'}
+              hiddenFrom="md"
+              w={rem('250px')}
+              h={rem('219px')}
+              src="/asset/img/hero_main_img.png"
+            />
+            <Box className="hero-desc" pb={rem('50px')} hiddenFrom="md">
+              <Text
+                ta={'center'}
+                c={theme.colors.violet[2]}
+                size={theme.fontSizes.fs_14}
+                fw={theme.fontWeights.fw_300}
+              >
+                Lorem ipsum dolor sit amet consectetur. Egestas habitant lorem in turpis aenean nunc
+                elit orci sit. Purus tempus sit semper velit aliquet scelerisque sed massaLorem
+                ipsum dolor sit amet consectetur. Egestas habitant lorem in turpis aenean nunc elit
+                orci sit. Purus tempus sit semper velit aliquet scelerisque sed massa..
+              </Text>
+            </Box>
+          </Box>
+
+          <Flex hiddenFrom="md" className="hero-btn" gap={20} justify={"center"}>
+            <ButtonCustom
+              width={rem('200px')}
+              height={rem('50px')}
+              fontSize={rem('14px')}
+              px={"auto"}
+              py={"auto"}
+            >
+              Getting Started
+            </ButtonCustom>
+            <ButtonCustom
+              width={rem('130px')}
+              height={rem('50px')}
+              background="transparent"
+              color="#3B3089"
+              border="2px solid #3b3089"
+              fontSize={rem('14px')}
+              px={"auto"}
+              py={"auto"}
+            >
+              Demo
+            </ButtonCustom>
+          </Flex>
+        </GridCol>
+      </Grid>
+    </section>
   );
 };
 

@@ -10,6 +10,8 @@ type Props = {
   color?: string;
   border?: string;
   fontSize?: string;
+  px?: string | number;
+  py?: string | number;
 };
 
 const ButtonCustom = ({
@@ -21,6 +23,8 @@ const ButtonCustom = ({
   color,
   border,
   fontSize,
+  px,
+  py,
 }: Props) => {
   return (
     <>
@@ -34,10 +38,10 @@ const ButtonCustom = ({
           gap: rem('10px'),
           borderRadius: rem('30px'),
           cursor: 'pointer',
-          padding: `${rem(12)} ${rem(30)}`,
-          alignItems: "center",
-          height: height? height : rem('50px'),
-          width: width? width : rem('220px'),
+          padding: px || py ? `${rem(py)} ${rem(px)}` : `${rem(12)} ${rem(30)}`,
+          alignItems: 'center',
+          height: height ? height : rem('50px'),
+          width: width ? width : rem('220px'),
           border: border,
           color: color ? color : '#ffffff',
           background: background

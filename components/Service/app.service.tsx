@@ -1,8 +1,8 @@
-import { Box, Container, Flex, Grid, GridCol, Text, rem } from '@mantine/core';
+import { Box, Flex, em, rem } from '@mantine/core';
 import React from 'react';
-import './app.service.scss';
-import BoxTile from '../BoxTile/app.comparison';
+import BoxTile from '../BoxTile/app.boxtitle';
 import Comparision from '../Comparision/app.comparision';
+import { useMediaQuery } from '@mantine/hooks';
 // Type alias cho dữ liệu main service item
 export type ServiceItem = {
   id: number;
@@ -115,14 +115,10 @@ const serviceItems: MainServiceItem[] = [
   },
 ];
 const Service = () => {
+  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
   return (
-    <section
-      className="service-wrapper"
-      style={{
-        paddingTop: rem('275px'),
-      }}
-    >
-      <Container size={1140} style={{ margin: '0 auto', padding: 0 }}>
+    <section className="service-wrapper">
+      <Box pt={isTableb ? rem('100px') : rem('275px')}>
         {/*phan 1 compare  */}
         <BoxTile
           top={'Quality Comparision'}
@@ -134,10 +130,15 @@ const Service = () => {
           }
         />
         {/*phan 2   */}
-        <Flex justify={'space-between'} mt={rem('113px')}>
+        <Flex
+          gap={isTableb ? '50' : 0}
+          justify={isTableb ? 'center' : 'space-between'}
+          mt={rem('113px')}
+          wrap={'wrap'}
+        >
           {serviceItems && serviceItems.map((item) => <Comparision key={item.id} data={item} />)}
         </Flex>
-      </Container>
+      </Box>
     </section>
   );
 };
