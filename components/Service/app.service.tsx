@@ -115,7 +115,7 @@ const serviceItems: MainServiceItem[] = [
   },
 ];
 const Service = () => {
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <section className="service-wrapper">
       <Box pt={isTableb ? rem('100px') : rem('275px')}>

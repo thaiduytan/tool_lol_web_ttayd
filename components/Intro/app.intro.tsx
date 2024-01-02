@@ -34,7 +34,7 @@ const introItems: IntroItemsType[] = [
 const Intro = () => {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <section className="intro-wrapper">
       <Box

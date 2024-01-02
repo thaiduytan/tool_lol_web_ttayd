@@ -16,7 +16,8 @@ export default function HomePage() {
   // const { height, width } = useViewportSize();
   // const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
+  // 769
   return (
     <>
       <Box className="wrapper" pb={rem('250px')}>

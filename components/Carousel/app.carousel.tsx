@@ -24,7 +24,7 @@ import { useMediaQuery } from '@mantine/hooks';
 const CarouselTool = () => {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <section className="carousel_wrapper">
       <Grid mt={!isTableb ? rem('250px') : rem('150px')}>

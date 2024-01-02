@@ -40,7 +40,7 @@ const menuItems: IMenuItems[] = [
 const AppHeader = () => {
   const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure();
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <header id="header">
       <Menu shadow="md" width={200}></Menu>

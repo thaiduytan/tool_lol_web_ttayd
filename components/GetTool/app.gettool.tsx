@@ -7,7 +7,7 @@ import { useMediaQuery } from '@mantine/hooks';
 const GetTool = () => {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <section className="gettool-wrapper">
       <Box mt={!isTableb ? theme.marginTop.marginTop_230 : theme.marginTop.marginTop_125}>

@@ -71,7 +71,7 @@ const featureItems: FeartureItemsType[] = [
 const Feature = () => {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <section className="feature-wrapper">
       <Box mt={!isTableb ? rem('300px') : rem('0px')}>

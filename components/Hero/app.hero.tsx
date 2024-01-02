@@ -16,7 +16,7 @@ import {
 import ButtonCustom from '../Button/app.button';
 import { useMediaQuery } from '@mantine/hooks';
 const Hero = () => {
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   const theme = useMantineTheme();
   return (
     <section className="hero-wrapper">

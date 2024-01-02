@@ -25,7 +25,7 @@ export type QuestionItems = {
 };
 const Questions = () => {
   const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   const theme = useMantineTheme();
   const questionItems: QuestionItems[] = [
     {

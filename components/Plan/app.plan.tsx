@@ -76,7 +76,7 @@ const cardItems: CardItemsType[] = [
 
 const Plan = () => {
   const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
-  const isTableb = useMediaQuery(`(max-width: ${em(769)})`);
+  const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <section className="plan-wrapper">
       {/* Nội dung trong container */}
