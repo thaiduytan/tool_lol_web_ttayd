@@ -118,7 +118,7 @@ const CardPlan = ({
           <Image
             pr={rem('10px')}
             fit="cover"
-            src="/asset/img/Vector (Stroke) (3).png"
+            src="/asset/img/card_button_icon.png"
             alt="buy now"
           />
           Buy Now
