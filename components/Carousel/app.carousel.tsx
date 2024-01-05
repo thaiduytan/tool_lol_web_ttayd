@@ -42,7 +42,7 @@ const CarouselTool = () => {
             <Carousel.Slide className="carousel_item">
               <Grid gutter={70}>
                 <GridCol span={{ base: 12, md: 7 }}>
-                  <Box className="carousel_image" >
+                  <Box className="carousel_image">
                     <Image
                       // ml={'auto'}
                       w={!isMobile ? rem('600px') : rem('315px')}
@@ -97,24 +97,21 @@ const CarouselTool = () => {
                           c={theme.colors.violet[1]}
                           mt={theme.other.marginTop.marginTop_20}
                         >
-                          <Title
+                          <ClampText
                             ff={"'Roboto', sans-serif"}
                             size={!isMobile ? theme.fontSizes.fs_24 : theme.fontSizes.fs_20}
-                          >
+                            lines={1}
+                            text="2023 League of Legends Tier List listasdsad"
+                          />
+                          <Box mt={theme.other.marginTop.marginTop_20}>
                             <ClampText
-                              lines={1}
-                              text="2023 League of Legends Tier List listasdsad"
-                            />
-                          </Title>
-                          <Text
-                            mt={theme.other.marginTop.marginTop_20}
-                            size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
-                          >
-                            <ClampText
+                              ff={"'Outfit', sans-serif"}
+                              size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
+                              fw={300}
                               lines={3}
                               text="Introduction:As the world of League of Legends evolves with each passing year, new champions rise to prominence while others fall out of favor. In this article, we'll delve ..."
                             />
-                          </Text>
+                          </Box>
                         </Box>
                       </Box>
                       <Box className="carousel-readmore">
@@ -191,24 +188,21 @@ const CarouselTool = () => {
                           c={theme.colors.violet[1]}
                           mt={theme.other.marginTop.marginTop_20}
                         >
-                          <Title
+                          <ClampText
                             ff={"'Roboto', sans-serif"}
                             size={!isMobile ? theme.fontSizes.fs_24 : theme.fontSizes.fs_20}
-                          >
+                            lines={1}
+                            text="2023 League of Legends Tier List listasdsad"
+                          />
+                          <Box mt={theme.other.marginTop.marginTop_20}>
                             <ClampText
-                              lines={1}
-                              text="2023 League of Legends Tier List listasdsad"
-                            />
-                          </Title>
-                          <Text
-                            mt={theme.other.marginTop.marginTop_20}
-                            size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
-                          >
-                            <ClampText
+                              ff={"'Outfit', sans-serif"}
+                              size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
+                              fw={300}
                               lines={3}
                               text="Introduction:As the world of League of Legends evolves with each passing year, new champions rise to prominence while others fall out of favor. In this article, we'll delve ..."
                             />
-                          </Text>
+                          </Box>
                         </Box>
                       </Box>
                       <Box className="carousel-readmore">
@@ -285,24 +279,21 @@ const CarouselTool = () => {
                           c={theme.colors.violet[1]}
                           mt={theme.other.marginTop.marginTop_20}
                         >
-                          <Title
+                          <ClampText
                             ff={"'Roboto', sans-serif"}
                             size={!isMobile ? theme.fontSizes.fs_24 : theme.fontSizes.fs_20}
-                          >
+                            lines={1}
+                            text="2023 League of Legends Tier List listasdsad"
+                          />
+                          <Box mt={theme.other.marginTop.marginTop_20}>
                             <ClampText
-                              lines={1}
-                              text="2023 League of Legends Tier List listasdsad"
-                            />
-                          </Title>
-                          <Text
-                            mt={theme.other.marginTop.marginTop_20}
-                            size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
-                          >
-                            <ClampText
+                              ff={"'Outfit', sans-serif"}
+                              size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
+                              fw={300}
                               lines={3}
                               text="Introduction:As the world of League of Legends evolves with each passing year, new champions rise to prominence while others fall out of favor. In this article, we'll delve ..."
                             />
-                          </Text>
+                          </Box>
                         </Box>
                       </Box>
                       <Box className="carousel-readmore">

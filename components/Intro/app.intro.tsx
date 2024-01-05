@@ -59,12 +59,12 @@ const Intro = () => {
                 w={isMobile ? '100%' : isTableb ? '40%' : 'auto'}
               >
                 <Image src={`/asset/img/${item.icon}`} />
-                <Text
+                <ClampText
                   size={!isTableb ? theme.fontSizes.fs_20 : theme.fontSizes.fs_12}
                   fw={theme.other.fontWeights.normal}
-                >
-                  <ClampText lines={2} text={item.label}></ClampText>
-                </Text>
+                  lines={2}
+                  text={item.label}
+                />
               </Group>
             ))}
         </Flex>

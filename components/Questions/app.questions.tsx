@@ -63,7 +63,9 @@ const Questions = () => {
   `;
   return (
     <section className="questions">
-      <Box mt={!isTableb ? theme.other.marginTop.marginTop_230 : theme.other.marginTop.marginTop_125}>
+      <Box
+        mt={!isTableb ? theme.other.marginTop.marginTop_230 : theme.other.marginTop.marginTop_125}
+      >
         <Grid className="question-title">
           <GridCol>
             <BoxTile
@@ -95,14 +97,13 @@ const Questions = () => {
                 ta={!isTableb ? 'center' : 'start'}
                 bg={theme.colors.blue[1]}
               >
-                <Text
+                <ClampText
                   fw={theme.other.fontWeights.fw_300}
                   size={!isTableb ? theme.fontSizes.fs_20 : theme.fontSizes.fs_12}
                   c={theme.colors.black[2]}
-                >
-                  {/* {item.title} */}
-                  <ClampText lines={1} text={item.title} />
-                </Text>
+                  lines={1}
+                  text={item.title}
+                />
                 <Image
                   src={'/asset/img/icon_question_down.png'}
                   w={rem('20px')}
