@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 import './app.header.scss';
 import React from 'react';
 import Link from 'next/link';
@@ -16,6 +16,7 @@ import {
   Box,
   useMantineTheme,
   em,
+  NavLink,
 } from '@mantine/core';
 import Headermobile from '../HeaderMoblie/app.headermobile';
 export interface IMenuItems {
