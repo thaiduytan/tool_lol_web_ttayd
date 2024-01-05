@@ -73,7 +73,21 @@ const AppHeader = () => {
           <Menu>
             <Flex gap={66} direction="row" wrap="wrap" align="center">
               {menuItems.map((item) => (
-                <Link key={item.id} href={item.link} className="header-nav_link">
+                <Link
+                  style={{
+                    textDecoration: 'none',
+                    fontFamily: "'Outfit', sans-serif",
+                    fontWeight: 700,
+                    fontSize: rem('16px'),
+                    lineHeight: rem('24px'),
+                    color: '#3b3089',
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                  key={item.id}
+                  href={item.link}
+                  className="header-nav_link"
+                >
                   {item.img ? (
                     <Image
                       w={18.4}
