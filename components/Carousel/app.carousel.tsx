@@ -63,7 +63,7 @@ const CarouselTool = () => {
                         <Flex
                           wrap="nowrap"
                           align={'center'}
-                          gap={!isMobile ? theme.gap.gap_30 : theme.gap.gap_10}
+                          gap={!isMobile ? theme.other.gap.gap_30 : theme.other.gap.gap_10}
                         >
                           <Flex className="carousel_date" align={'center'} gap={rem('9px')}>
                             <Image
@@ -95,7 +95,7 @@ const CarouselTool = () => {
                         <Box
                           fs={theme.fontSizes.normal}
                           c={theme.colors.violet[1]}
-                          mt={theme.marginTop.marginTop_20}
+                          mt={theme.other.marginTop.marginTop_20}
                         >
                           <Title
                             ff={"'Roboto', sans-serif"}
@@ -107,7 +107,7 @@ const CarouselTool = () => {
                             />
                           </Title>
                           <Text
-                            mt={theme.marginTop.marginTop_20}
+                            mt={theme.other.marginTop.marginTop_20}
                             size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
                           >
                             <ClampText
@@ -157,7 +157,7 @@ const CarouselTool = () => {
                         <Flex
                           wrap="nowrap"
                           align={'center'}
-                          gap={!isMobile ? theme.gap.gap_30 : theme.gap.gap_10}
+                          gap={!isMobile ? theme.other.gap.gap_30 : theme.other.gap.gap_10}
                         >
                           <Flex className="carousel_date" align={'center'} gap={rem('9px')}>
                             <Image
@@ -189,7 +189,7 @@ const CarouselTool = () => {
                         <Box
                           fs={theme.fontSizes.normal}
                           c={theme.colors.violet[1]}
-                          mt={theme.marginTop.marginTop_20}
+                          mt={theme.other.marginTop.marginTop_20}
                         >
                           <Title
                             ff={"'Roboto', sans-serif"}
@@ -201,7 +201,7 @@ const CarouselTool = () => {
                             />
                           </Title>
                           <Text
-                            mt={theme.marginTop.marginTop_20}
+                            mt={theme.other.marginTop.marginTop_20}
                             size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
                           >
                             <ClampText
@@ -251,7 +251,7 @@ const CarouselTool = () => {
                         <Flex
                           wrap="nowrap"
                           align={'center'}
-                          gap={!isMobile ? theme.gap.gap_30 : theme.gap.gap_10}
+                          gap={!isMobile ? theme.other.gap.gap_30 : theme.other.gap.gap_10}
                         >
                           <Flex className="carousel_date" align={'center'} gap={rem('9px')}>
                             <Image
@@ -283,7 +283,7 @@ const CarouselTool = () => {
                         <Box
                           fs={theme.fontSizes.normal}
                           c={theme.colors.violet[1]}
-                          mt={theme.marginTop.marginTop_20}
+                          mt={theme.other.marginTop.marginTop_20}
                         >
                           <Title
                             ff={"'Roboto', sans-serif"}
@@ -295,7 +295,7 @@ const CarouselTool = () => {
                             />
                           </Title>
                           <Text
-                            mt={theme.marginTop.marginTop_20}
+                            mt={theme.other.marginTop.marginTop_20}
                             size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
                           >
                             <ClampText
@@ -359,7 +359,7 @@ const CarouselTool = () => {
                       <Flex
                         wrap="nowrap"
                         align={'center'}
-                        gap={!isMobile ? theme.gap.gap_30 : theme.gap.gap_10}
+                        gap={!isMobile ? theme.other.gap.gap_30 : theme.other.gap.gap_10}
                       >
                         <Flex className="carousel_date" align={'center'} gap={rem('9px')}>
                           <Image
@@ -391,7 +391,7 @@ const CarouselTool = () => {
                       <Box
                         fs={theme.fontSizes.normal}
                         c={theme.colors.violet[1]}
-                        mt={theme.marginTop.marginTop_20}
+                        mt={theme.other.marginTop.marginTop_20}
                       >
                         <Title
                           ff={"'Roboto', sans-serif"}
@@ -400,7 +400,7 @@ const CarouselTool = () => {
                           <ClampText lines={1} text="2023 League of Legends Tier List listasdsad" />
                         </Title>
                         <Text
-                          mt={theme.marginTop.marginTop_20}
+                          mt={theme.other.marginTop.marginTop_20}
                           size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
                         >
                           <ClampText
@@ -450,7 +450,7 @@ const CarouselTool = () => {
                       <Flex
                         wrap="nowrap"
                         align={'center'}
-                        gap={!isMobile ? theme.gap.gap_30 : theme.gap.gap_10}
+                        gap={!isMobile ? theme.other.gap.gap_30 : theme.other.gap.gap_10}
                       >
                         <Flex className="carousel_date" align={'center'} gap={rem('9px')}>
                           <Image
@@ -482,7 +482,7 @@ const CarouselTool = () => {
                       <Box
                         fs={theme.fontSizes.normal}
                         c={theme.colors.violet[1]}
-                        mt={theme.marginTop.marginTop_20}
+                        mt={theme.other.marginTop.marginTop_20}
                       >
                         <Title
                           ff={"'Roboto', sans-serif"}
@@ -491,7 +491,7 @@ const CarouselTool = () => {
                           <ClampText lines={1} text="2023 League of Legends Tier List listasdsad" />
                         </Title>
                         <Text
-                          mt={theme.marginTop.marginTop_20}
+                          mt={theme.other.marginTop.marginTop_20}
                           size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
                         >
                           <ClampText
@@ -541,7 +541,7 @@ const CarouselTool = () => {
                       <Flex
                         wrap="nowrap"
                         align={'center'}
-                        gap={!isMobile ? theme.gap.gap_30 : theme.gap.gap_10}
+                        gap={!isMobile ? theme.other.gap.gap_30 : theme.other.gap.gap_10}
                       >
                         <Flex className="carousel_date" align={'center'} gap={rem('9px')}>
                           <Image
@@ -573,7 +573,7 @@ const CarouselTool = () => {
                       <Box
                         fs={theme.fontSizes.normal}
                         c={theme.colors.violet[1]}
-                        mt={theme.marginTop.marginTop_20}
+                        mt={theme.other.marginTop.marginTop_20}
                       >
                         <Title
                           ff={"'Roboto', sans-serif"}
@@ -582,7 +582,7 @@ const CarouselTool = () => {
                           <ClampText lines={1} text="2023 League of Legends Tier List listasdsad" />
                         </Title>
                         <Text
-                          mt={theme.marginTop.marginTop_20}
+                          mt={theme.other.marginTop.marginTop_20}
                           size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_14}
                         >
                           <ClampText

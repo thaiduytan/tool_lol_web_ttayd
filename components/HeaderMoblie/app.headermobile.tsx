@@ -30,7 +30,7 @@ const HeaderMobile: FC<HeaderMobileType> = ({ opened, toggle, menuItems }) => {
             menuItems.map((item) => (
               <Menu.Item
                 ff={theme.headings.fontFamily}
-                fw={theme.fontWeights.blod}
+                fw={theme.other.fontWeights.blod}
                 ta={'center'}
                 key={`menuitems-${item.id}`}
               >

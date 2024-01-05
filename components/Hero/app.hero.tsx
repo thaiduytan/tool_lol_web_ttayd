@@ -41,7 +41,7 @@ const Hero = () => {
               ) : (
                 <Title
                   ta={'center'}
-                  fw={theme.fontWeights.blod}
+                  fw={theme.other.fontWeights.blod}
                   c={theme.colors.violet[1]}
                   size={rem('30px')}
                 >
@@ -54,7 +54,7 @@ const Hero = () => {
               <Text
                 c={theme.colors.violet[1]}
                 size={theme.fontSizes.fs_20}
-                fw={theme.fontWeights.fw_300}
+                fw={theme.other.fontWeights.fw_300}
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cupiditate consequatur
                 nulla vel modi autem molestiae? Dolores unde esse ab fugit minus quod
@@ -101,7 +101,7 @@ const Hero = () => {
                 ta={'center'}
                 c={theme.colors.violet[2]}
                 size={theme.fontSizes.fs_14}
-                fw={theme.fontWeights.fw_300}
+                fw={theme.other.fontWeights.fw_300}
               >
                 Lorem ipsum dolor sit amet consectetur. Egestas habitant lorem in turpis aenean nunc
                 elit orci sit. Purus tempus sit semper velit aliquet scelerisque sed massaLorem

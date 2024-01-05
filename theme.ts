@@ -34,10 +34,10 @@ export const theme = createTheme({
   /* Put your mantine theme override here */
   colors: {
     // Add your color
-    black: ['#1E1E1EAB', '#C1CCF6', '#000000'], 
-    blue: ['#6EC3FD4D', '#5DA7DA4D', '#5d8fda', '#5da7da', '#5DA7DA42','#4470B2'],
-    violet: ['#3B30894D', '#3b3089', '#3B3089E5'],
-    white: ['#ffffff'],
+    black: ['#1E1E1EAB', '#C1CCF6', '#000000', '', '', '', '', '', '', ''],
+    blue: ['#6EC3FD4D', '#5DA7DA4D', '#5d8fda', '#5da7da', '#5DA7DA42', '#4470B2', '', '', '', ''],
+    violet: ['#3B30894D', '#3b3089', '#3B3089E5', '', '', '', '', '', '', ''],
+    white: ['#ffffff', '', '', '', '', '', '', '', '', ''],
   },
   shadows: {
     md: '1px 1px 3px rgba(0, 0, 0, .25)',
@@ -68,39 +68,38 @@ export const theme = createTheme({
     text_20: rem(20),
   },
 
-  fontWeights: {
-    fw_300: 300,
-    normal: 400,
-    bold: 700,
-  },
+  other: {
+    fontWeights: {
+      fw_300: 300,
+      normal: 400,
+      bold: 700,
+    },
 
-  marginTop: {
-    marginTop_20: rem('20'),
-    marginTop_60: rem('60'),
-    marginTop_35: rem('35'),
-    marginTop_40: rem('35'),
-    marginTop_125: rem('125'),
-    marginTop_230: rem('230'),
-
-  },
-
-  borderRadius: {
-    borderRadius_10: '10px',
-    borderRadius_389: '389px',
-    borderRadius_circle: '50%',
-  },
-  borderColor: {
-    borderColor_0: '#5D8FDA',
-  },
-
-  fillter: {
-    blur_100: 'blur(100px)',
-  },
-  gap: {
-    gap_6: rem('6px'),
-    gap_10: rem('10px'),
-    gap_20: rem('20px'),
-    gap_30: rem('30px'),
-    gap_40: rem('gap_40'),
+    marginTop: {
+      marginTop_20: rem('20'),
+      marginTop_60: rem('60'),
+      marginTop_35: rem('35'),
+      marginTop_40: rem('35'),
+      marginTop_125: rem('125'),
+      marginTop_230: rem('230'),
+    },
+    borderRadius: {
+      borderRadius_10: '10px',
+      borderRadius_389: '389px',
+      borderRadius_circle: '50%',
+    },
+    borderColor: {
+      borderColor_0: '#5D8FDA',
+    },
+    fillter: {
+      blur_100: 'blur(100px)',
+    },
+    gap: {
+      gap_6: rem('6px'),
+      gap_10: rem('10px'),
+      gap_20: rem('20px'),
+      gap_30: rem('30px'),
+      gap_40: rem('gap_40'),
+    },
   },
 });

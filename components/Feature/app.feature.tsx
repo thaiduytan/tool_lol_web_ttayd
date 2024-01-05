@@ -14,15 +14,13 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 
-export type FeartureItemsType = [
-  {
-    id: number;
-    img_bg: string;
-    img: string;
-    title: string;
-    desc: string;
-  },
-];
+export type FeartureItemsType = {
+  id: number;
+  img_bg: string;
+  img: string;
+  title: string;
+  desc: string;
+};
 const featureItems: FeartureItemsType[] = [
   {
     id: 1,
@@ -97,13 +95,13 @@ const Feature = () => {
               wrap="nowrap"
               ff={theme.headings.fontFamily}
               ta={!isTableb ? 'right' : 'center'}
-              fw={theme.fontWeights.bold}
+              fw={theme.other.fontWeights.bold}
             >
               <Text
                 className="feature-right_exclusive"
                 ff={"'Roboto', sans-serif"}
                 size={!isMobile ? theme.fontSizes.fs_20 : theme.fontSizes.fs_14}
-                fw={theme.fontWeights.bold}
+                fw={theme.other.fontWeights.bold}
                 lh={!isMobile ? rem('24px') : rem('16px')}
                 c={theme.colors.blue[3]}
               >
@@ -112,7 +110,7 @@ const Feature = () => {
               <Title
                 className="feature-right_title"
                 size={!isMobile ? theme.fontSizes.fs_50 : theme.fontSizes.fs_24}
-                fw={theme.fontWeights.bold}
+                fw={theme.other.fontWeights.bold}
                 lh={!isMobile ? rem('60px') : rem('28px')}
                 c={theme.colors.violet[1]}
               >
@@ -129,7 +127,7 @@ const Feature = () => {
               <Text
                 className="feature-right_desc"
                 size={!isMobile ? theme.fontSizes.fs_20 : theme.fontSizes.fs_14}
-                fw={theme.fontWeights.fw_300}
+                fw={theme.other.fontWeights.fw_300}
                 lh={!isMobile ? rem('24px') : rem('16px')}
                 c={theme.colors.violet[1]}
               >
@@ -173,7 +171,7 @@ const Feature = () => {
                   >
                     <Text
                       size={!isMobile ? theme.fontSizes.fs_30 : theme.fontSizes.fs_20}
-                      fw={theme.fontWeights.bold}
+                      fw={theme.other.fontWeights.bold}
                       mt={!isTableb ? rem('30px') : '0'}
                       ta={!isTableb ? 'center' : 'start'}
                     >
@@ -182,7 +180,7 @@ const Feature = () => {
                     <Text
                       lh={!isMobile ? rem('24px') : rem('14px')}
                       size={!isMobile ? theme.fontSizes.fs_16 : theme.fontSizes.fs_12}
-                      fw={theme.fontWeights.normal}
+                      fw={theme.other.fontWeights.normal}
                       mt={!isTableb ? rem('30px') : '5px'}
                       ta={!isTableb ? 'center' : 'start'}
                     >

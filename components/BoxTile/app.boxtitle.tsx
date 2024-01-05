@@ -8,7 +8,7 @@ type BoxTileProps = {
   title: string;
   desc: string;
   align?: StyleProp<React.CSSProperties['textAlign']>;
-  childen: React.ReactNode;
+  childen?: React.ReactNode;
 };
 
 const BoxTile = (props: BoxTileProps) => {
@@ -22,7 +22,7 @@ const BoxTile = (props: BoxTileProps) => {
         lh={!isMobile ? rem('24px') : rem('16.8px')}
         size={!isMobile ? theme.fontSizes.fs_20 : theme.fontSizes.fs_14}
         c={theme.colors.blue[3]}
-        fw={theme.fontWeights.bold}
+        fw={theme.other.fontWeights.bold}
         ta={align ? align : 'center'}
         ff={"'Roboto', sans-serif"}
       >
@@ -35,7 +35,7 @@ const BoxTile = (props: BoxTileProps) => {
         lh={!isMobile ? rem('60px') : rem('28.8px')}
         size={!isMobile ? theme.fontSizes.fs_50 : theme.fontSizes.fs_24}
         c={theme.colors.violet[1]}
-        fw={theme.fontWeights.bold}
+        fw={theme.other.fontWeights.bold}
         ta={align ? align : 'center'}
         m={'0px auto'}
       >
@@ -51,7 +51,7 @@ const BoxTile = (props: BoxTileProps) => {
         lh={!isMobile ? rem('24px') : rem('16.8px')}
         size={!isMobile ? theme.fontSizes.fs_20 : theme.fontSizes.fs_14}
         c={theme.colors.violet[1]}
-        fw={theme.fontWeights.fw_300}
+        fw={theme.other.fontWeights.fw_300}
         ta={align ? align : 'center'}
       >
         {props.desc}

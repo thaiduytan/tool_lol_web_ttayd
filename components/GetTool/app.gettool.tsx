@@ -10,9 +10,9 @@ const GetTool = () => {
   const isTableb = useMediaQuery(`(max-width: ${em(992)})`);
   return (
     <section className="gettool-wrapper">
-      <Box mt={!isTableb ? theme.marginTop.marginTop_230 : theme.marginTop.marginTop_125}>
+      <Box mt={!isTableb ? theme.other.marginTop.marginTop_230 : theme.other.marginTop.marginTop_125}>
         <Flex
-          gap={theme.gap.gap_6}
+          gap={theme.other.gap.gap_6}
           justify="flex-start"
           align="flex-start"
           direction="row"
@@ -40,8 +40,8 @@ const GetTool = () => {
               <Image src={'/asset/img/gettool_img_moblie.png'} />
             </Box> */}
             <Group
-              gap={!isMobile ? theme.gap.gap_30 : theme.gap.gap_10}
-              mt={theme.marginTop.marginTop_40}
+              gap={!isMobile ? theme.other.gap.gap_30 : theme.other.gap.gap_10}
+              mt={theme.other.marginTop.marginTop_40}
             >
               <ButtonCustom
                 width={!isMobile ? rem('271px') : '100%'}
@@ -84,8 +84,8 @@ const GetTool = () => {
               className="overplay"
               style={{
                 background: theme.colors.violet[0],
-                borderRadius: theme.borderRadius.borderRadius_circle,
-                filter: `${theme.fillter.blur_100}`,
+                borderRadius: theme.other.borderRadius.borderRadius_circle,
+                filter: `${theme.other.fillter.blur_100}`,
                 position: 'absolute',
                 zIndex: 1,
                 width: rem('400px'),

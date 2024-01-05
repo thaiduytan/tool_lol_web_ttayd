@@ -16,8 +16,8 @@ const Comparision: React.FC<ComparisionProps> = ({ data }) => {
     <>
       <Box
         style={{
-          borderRadius: theme.borderRadius.borderRadius_10,
-          border: `${data.free !== true ? `2px solid ${theme.borderColor.borderColor_0}` : ''} `,
+          borderRadius: theme.other.borderRadius.borderRadius_10,
+          border: `${data.free !== true ? `2px solid ${theme.other.borderColor.borderColor_0}` : ''} `,
         }}
         w={rem('557px')}
         // pt={rem('74px')}
@@ -37,27 +37,27 @@ const Comparision: React.FC<ComparisionProps> = ({ data }) => {
         >
           <Title
             size={!isMobile ? theme.fontSizes.title_30 : theme.fontSizes.title_20}
-            fw={theme.fontWeights.bold}
+            fw={theme.other.fontWeights.bold}
             c={theme.colors.black[0]}
           >
             {data.title}
           </Title>
           <Text
             size={theme.fontSizes.desc_16}
-            fw={theme.fontWeights.normal}
+            fw={theme.other.fontWeights.normal}
             c={theme.colors.black[0]}
           >
             {data.desc}
           </Text>
         </Flex>
-        <Box pos={'relative'} mt={theme.marginTop.marginTop_60}>
+        <Box pos={'relative'} mt={theme.other.marginTop.marginTop_60}>
           {data.free !== true && (
             <Box
               className="overplay"
               style={{
                 background: theme.colors.blue[0],
-                borderRadius: theme.borderRadius.borderRadius_389,
-                filter: `${theme.fillter.blur_100}`,
+                borderRadius: theme.other.borderRadius.borderRadius_389,
+                filter: `${theme.other.fillter.blur_100}`,
                 position: 'absolute',
                 zIndex: 1,
                 width: '100%',
@@ -71,7 +71,7 @@ const Comparision: React.FC<ComparisionProps> = ({ data }) => {
                 <Grid
                   key={`abc-${item.id}`}
                   align="center"
-                  mt={theme.marginTop.marginTop_35}
+                  mt={theme.other.marginTop.marginTop_35}
                   ff={theme.headings.fontFamily}
                   style={{ color: theme.colors.black[0], zIndex: 2 }}
                 >

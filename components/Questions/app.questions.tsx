@@ -63,7 +63,7 @@ const Questions = () => {
   `;
   return (
     <section className="questions">
-      <Box mt={!isTableb ? theme.marginTop.marginTop_230 : theme.marginTop.marginTop_125}>
+      <Box mt={!isTableb ? theme.other.marginTop.marginTop_230 : theme.other.marginTop.marginTop_125}>
         <Grid className="question-title">
           <GridCol>
             <BoxTile
@@ -96,7 +96,7 @@ const Questions = () => {
                 bg={theme.colors.blue[1]}
               >
                 <Text
-                  fw={theme.fontWeights.fw_300}
+                  fw={theme.other.fontWeights.fw_300}
                   size={!isTableb ? theme.fontSizes.fs_20 : theme.fontSizes.fs_12}
                   c={theme.colors.black[2]}
                 >

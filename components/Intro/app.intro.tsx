@@ -61,7 +61,7 @@ const Intro = () => {
                 <Image src={`/asset/img/${item.icon}`} />
                 <Text
                   size={!isTableb ? theme.fontSizes.fs_20 : theme.fontSizes.fs_12}
-                  fw={theme.fontWeights.normal}
+                  fw={theme.other.fontWeights.normal}
                 >
                   <ClampText lines={2} text={item.label}></ClampText>
                 </Text>
